@@ -5,25 +5,23 @@
 
 ## Project Overview
 
-This project addresses the **functional safety layer** of the one-pedal drive controller for an electric vehicle. Starting from the controller developed in the previous project, a **Hazard Analysis and Risk Assessment (HARA)** was performed to identify risk sources, define safety goals, assign ASIL levels, and implement a real-time **Safety Function** as a Simulink software unit.
+This project addresses the **functional safety layer** of the one-pedal drive controller for an electric vehicle. Starting from the controller developed in the previous project.
 
 The work covers:
 - Identification of hazard sources and their ASIL classification
 - Definition of safety goals and their attributes (safe state, fault tolerance time, warning concept)
 - Derivation of functional and technical safety requirements
-- Preliminary safety architecture design (with and without ASIL decomposition)
 - Software implementation of the safety mechanism
 - Unit testing and integration testing with coverage analysis
 
-> **Scope note:** The one-pedal controller (`Controller.slx`) and the vehicle plant model were developed in prior work. **All safety architecture, safety function design, test harnesses, and test scenarios are original contributions of this project.**
-
+> **Scope note:** The one-pedal controller (`Controller.slx`) was developed in prior work.
 
 
 ## Identified Hazard Sources
 
 Two main sources of faults were identified through HARA:
 
-### 1. 🔌 CAN Bus Disconnection — ASIL C
+### 1. CAN Bus Disconnection — ASIL C
 A loss of communication on the CAN bus affects multiple critical signals simultaneously:
 
 | Lost Signal | Consequence |
